@@ -52,16 +52,19 @@ while flag
     W = update_W(Z,ZZ,W,num_p);
     Z = update_Z(fea,E,Z,H,ZZ,W,alpha,beta,C,num_p);
     for i=1:num_p
-        cnt1(i) = trace(Z{i}'*W{i}*ZZ);
+        cnt1(i) = trace(W{i}*ZZ*Z{i}');
         for j=1:num_view
             cnt(i,j) = sum(sum((fea{j}-H{i,j}*Z{i}-E{i,j}).^2));
         end
     end
-    beta = update_beta(cnt,beta,num_p,num_view);
+%     cal_obj(cnt,cnt1,alpha,beta,C,num_p,num_view)
+%     beta = update_beta(cnt,beta,num_p,num_view);
+%     cal_obj(cnt,cnt1,alpha,beta,C,num_p,num_view)
     alpha = update_alpha(cnt,beta,num_p,num_view);
+    cnt_tmp1= cal_obj(cnt,cnt1,alpha,beta,C,num_p,num_view);
     C = update_C(cnt1,num_p);
-    cal_obj(cnt,cnt1,alpha,beta,C,num_p,num_view)
-   
+    cnt_tmp2= cal_obj(cnt,cnt1,alpha,beta,C,num_p,num_view);
+   cnt_tmp1-cnt_tmp2
     obj(iter) = cal_obj(cnt,cnt1,alpha,beta,C,num_p,num_view);
     if (iter>2) && (abs((obj(iter)-obj(iter-1))/(obj(iter)))<1e-5 || iter>maxIter)
         flag =0;
