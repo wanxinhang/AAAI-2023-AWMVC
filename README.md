@@ -2,14 +2,7 @@
 AAAI 2023 AWMVC
 《Auto-weighted Multi-view Clustering for Large-scale Data》。
 
-@misc{wan2023autoweighted,
-      title={Auto-weighted Multi-view Clustering for Large-scale Data}, 
-      author={Xinhang Wan and Xinwang Liu and Jiyuan Liu and Siwei Wang and Yi Wen and Weixuan Liang and En Zhu and Zhe Liu and Lu Zhou},
-      year={2023},
-      eprint={2303.01983},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
+@article{Wan_Liu_Liu_Wang_Wen_Liang_Zhu_Liu_Zhou_2023, title={Auto-Weighted Multi-View Clustering for Large-Scale Data}, volume={37}, url={https://ojs.aaai.org/index.php/AAAI/article/view/26201}, DOI={10.1609/aaai.v37i8.26201}, abstractNote={Multi-view clustering has gained broad attention owing to its capacity to exploit complementary information across multiple data views. Although existing methods demonstrate delightful clustering performance, most of them are of high time complexity and cannot handle large-scale data. Matrix factorization-based models are a representative of solving this problem. However, they assume that the views share a dimension-fixed consensus coefficient matrix and view-specific base matrices, limiting their representability. Moreover, a series of large-scale algorithms that bear one or more hyperparameters are impractical in real-world applications. To address the two issues, we propose an auto-weighted multi-view clustering (AWMVC) algorithm. Specifically, AWMVC first learns coefficient matrices from corresponding base matrices of different dimensions, then fuses them to obtain an optimal consensus matrix. By mapping original features into distinctive low-dimensional spaces, we can attain more comprehensive knowledge, thus obtaining better clustering results. Moreover, we design a six-step alternative optimization algorithm proven to be convergent theoretically. Also, AWMVC shows excellent performance on various benchmark datasets compared with existing ones. The code of AWMVC is publicly available at https://github.com/wanxinhang/AAAI-2023-AWMVC.}, number={8}, journal={Proceedings of the AAAI Conference on Artificial Intelligence}, author={Wan, Xinhang and Liu, Xinwang and Liu, Jiyuan and Wang, Siwei and Wen, Yi and Liang, Weixuan and Zhu, En and Liu, Zhe and Zhou, Lu}, year={2023}, month={Jun.}, pages={10078-10086} }
 
 
 Any problem can contact wanxinhang@nudt.edu.cn. Thanks.
